@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudyHub - Notes</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7ff;
+            color: #172033;
+        }
+
+        nav {
+            background: white;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #2855e8;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #172033;
+            font-weight: bold;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 65px 20px 35px;
+        }
+
+        .icon {
+            font-size: 65px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin: 15px 0;
+        }
+
+        h1 span {
+            color: #2855e8;
+        }
+
+        .hero p {
+            color: #667085;
+            font-size: 18px;
+        }
+
+        .notes {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .note-card {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+        .note-card h2 {
+            margin-bottom: 12px;
+        }
+
+        .note-card p {
+            color: #667085;
+            line-height: 1.6;
+        }
+
+        .read-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: #2855e8;
+            color: white;
+            text-decoration: none;
+            border-radius: 9px;
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 70px;
+            background: #172033;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 800px) {
+            .notes {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 38px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">
+            Study<span>Hub</span>
+        </div>
+
+        <a href="index.html">🏠 Home</a>
+
+    </nav>
+
+
+    <section class="hero">
+
+        <div class="icon">📚</div>
+
+        <h1>Study <span>Notes</span></h1>
+
+        <p>
+            Read simple notes and improve your knowledge.
+        </p>
+
+    </section>
+
+
+    <section class="notes">
+
+        <div class="note-card">
+
+            <h2>➗ Mathematics</h2>
+
+            <p>
+                Learn basic numbers, addition, subtraction,
+                multiplication and division.
+            </p>
+
+            <a href="math.html" class="read-btn">
+                Read Notes
+            </a>
+
+        </div>
+
+
+        <div class="note-card">
+
+            <h2>📖 English</h2>
+
+            <p>
+                Improve grammar, vocabulary and English
+                writing skills.
+            </p>
+
+            <a href="english.html" class="read-btn">
+                Read Notes
+            </a>
+
+        </div>
+
+
+        <div class="note-card">
+
+            <h2>🧪 Chemistry</h2>
+
+            <p>
+                Learn about atoms, elements and simple
+                chemical reactions.
+            </p>
+
+            <a href="chemistry.html" class="read-btn">
+                Read Notes
+            </a>
+
+        </div>
+
+
+        <div class="note-card">
+
+            <h2>⚛️ Physics</h2>
+
+            <p>
+                Learn about motion, energy and gravity
+                in an easy way.
+            </p>
+
+            <a href="physics.html" class="read-btn">
+                Read Notes
+            </a>
+
+        </div>
+
+
+        <div class="note-card">
+
+            <h2>🌱 Biology</h2>
+
+            <p>
+                Learn about cells, plants, animals and
+                living things.
+            </p>
+
+            <a href="biology.html" class="read-btn">
+                Read Notes
+            </a>
+
+        </div>
+
+
+        <div class="note-card">
+
+            <h2>📝 Quiz</h2>
+
+            <p>
+                Test your knowledge and check what
+                you have learned.
+            </p>
+
+            <a href="quiz.html" class="read-btn">
+                Take Quiz
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            © 2026 StudyHub | Learn • Practice • Succeed
+        </p>
+
+    </footer>
+
+</body>
+</html>

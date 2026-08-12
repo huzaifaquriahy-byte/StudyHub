@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>StudyHub Admin Dashboard</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+
+display:flex;
+background:#f4f7ff;
+
+}
+
+/* Sidebar */
+
+.sidebar{
+
+width:250px;
+height:100vh;
+background:#172033;
+color:white;
+padding:25px;
+position:fixed;
+
+}
+
+.sidebar h2{
+
+text-align:center;
+margin-bottom:35px;
+
+}
+
+.sidebar h2 span{
+
+color:#3b82f6;
+
+}
+
+.sidebar a{
+
+display:block;
+color:white;
+text-decoration:none;
+padding:14px;
+margin-bottom:10px;
+border-radius:10px;
+
+}
+
+.sidebar a:hover{
+
+background:#2855e8;
+
+}
+
+/* Main */
+
+.main{
+
+margin-left:250px;
+width:100%;
+padding:30px;
+
+}
+
+.header{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:30px;
+
+}
+
+.header h1{
+
+color:#172033;
+
+}
+
+.logout{
+
+background:#dc2626;
+color:white;
+padding:12px 18px;
+border-radius:10px;
+text-decoration:none;
+
+}
+
+.logout:hover{
+
+background:#b91c1c;
+
+}
+
+/* Cards */
+
+.cards{
+
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+
+}
+
+.card{
+
+background:white;
+padding:25px;
+border-radius:18px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+text-align:center;
+
+}
+
+.card h2{
+
+font-size:35px;
+color:#2855e8;
+margin-bottom:10px;
+
+}
+
+.card p{
+
+color:#666;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>👑 Study<span>Hub</span></h2>
+
+<a href="#">🏠 Dashboard</a>
+
+<a href="#">👥 Students</a>
+
+<a href="#">🌍 Visitors</a>
+
+<a href="#">📝 Quiz</a>
+
+<a href="#">📚 Notes</a>
+
+<a href="#">⚙ Settings</a>
+
+</div>
+
+<div class="main">
+
+<div class="header">
+
+<h1>Admin Dashboard</h1>
+
+<a href="index.html" class="logout">
+
+Logout 🚪
+
+</a>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<h2 id="students">
+
+0
+
+</h2>
+
+<p>Total Students</p>
+
+</div>
+
+<div class="card">
+
+<h2 id="visitors">
+
+0
+
+</h2>
+
+<p>Total Visitors</p>
+
+</div>
+
+<div class="card">
+
+<h2 id="quiz">
+
+0
+
+</h2>
+
+<p>Quiz Attempts</p>
+
+</div>
+
+<div class="card">
+
+<h2 id="score">
+
+0%
+
+</h2>
+
+<p>Average Score</p>
+
+</div>
+
+</div>
+
+</div>
+<script>
+
+const accounts = JSON.parse(localStorage.getItem("studyHubAccounts")) || [];
+
+document.getElementById("students").textContent = accounts.length;
+
+</script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - StudyHub</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7ff;
+            color: #172033;
+        }
+
+        nav {
+            background: white;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #2855e8;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #2855e8;
+            font-weight: bold;
+        }
+
+        .contact-box {
+            max-width: 600px;
+            margin: 60px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        h1 span {
+            color: #2855e8;
+        }
+
+        .intro {
+            text-align: center;
+            color: #667085;
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 20px;
+            border: 1px solid #d9deea;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 140px;
+            resize: vertical;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            background: #2855e8;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #message {
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 80px;
+            background: #172033;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">Study<span>Hub</span></div>
+
+        <a href="index.html">🏠 Home</a>
+    </nav>
+
+    <section class="contact-box">
+
+        <h1>Contact <span>StudyHub</span></h1>
+
+        <p class="intro">
+            Have a question? Send us a message.
+        </p>
+
+        <form onsubmit="sendMessage(event)">
+
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label for="messageText">Message</label>
+            <textarea id="messageText" placeholder="Write your message..." required></textarea>
+
+            <button type="submit">Send Message 📩</button>
+
+        </form>
+
+        <div id="message"></div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 StudyHub | Learn • Practice • Succeed</p>
+    </footer>
+
+    <script>
+        function sendMessage(event) {
+            event.preventDefault();
+
+            document.getElementById("message").textContent =
+                "✅ Your message form is working!";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudyHub - Geometry</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7ff;
+            color: #172033;
+        }
+
+        nav {
+            background: white;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #2855e8;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #172033;
+            font-weight: bold;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 20px 40px;
+        }
+
+        .hero .icon {
+            font-size: 65px;
+        }
+
+        h1 {
+            font-size: 45px;
+            margin: 15px 0;
+        }
+
+        h1 span {
+            color: #2855e8;
+        }
+
+        .hero p {
+            color: #667085;
+            font-size: 18px;
+        }
+
+        .lesson {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #667085;
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        .example {
+            background: #f5f7ff;
+            padding: 18px;
+            border-radius: 12px;
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 2;
+        }
+
+        .quiz {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .quiz button {
+            background: #2855e8;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            margin: 6px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .quiz button:hover {
+            background: #173fc0;
+            transform: translateY(-2px);
+        }
+
+        .quiz button.correct {
+            background: #16a34a;
+        }
+
+        .quiz button.wrong {
+            background: #dc2626;
+        }
+
+        .quiz button:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        .question {
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #172033;
+        }
+
+        .score-btn {
+            display: block;
+            margin: 25px auto 0;
+            background: #f59e0b !important;
+            padding: 14px 25px;
+            font-size: 17px;
+        }
+
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        #finalScore {
+            margin-top: 20px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #2855e8;
+            text-align: center;
+        }
+
+        footer {
+            margin-top: 60px;
+            background: #172033;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">
+        Study<span>Hub</span>
+    </div>
+
+    <a href="math.html">➗ Back to Mathematics</a>
+</nav>
+
+<section class="hero">
+
+    <div class="icon">📐</div>
+
+    <h1>Learn <span>Geometry</span></h1>
+
+    <p>Understand shapes, angles, lines and basic geometry.</p>
+
+</section>
+
+<section class="lesson">
+
+    <div class="card">
+
+        <h2>📚 What is Geometry?</h2>
+
+        <p>
+            Geometry is a branch of mathematics that studies shapes,
+            sizes, lines, angles and positions.
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h2>🔺 Triangles</h2>
+
+        <p>
+            A triangle is a shape with three sides and three angles.
+        </p>
+
+        <div class="example">
+            Triangle = 3 sides<br>
+            Triangle angles = 180°
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>⭕ Circles</h2>
+
+        <p>
+            A circle is a round shape. The distance from the center
+            to the edge is called the radius.
+        </p>
+
+        <div class="example">
+            Radius = distance from center to edge<br>
+            Diameter = 2 × Radius
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>📏 Angles</h2>
+
+        <p>
+            An angle is formed when two lines or rays meet.
+            Angles are measured in degrees.
+        </p>
+
+        <div class="example">
+            Right angle = 90°<br>
+            Straight angle = 180°
+        </div>
+
+    </div>
+
+</section>
+
+<section class="quiz">
+
+    <div class="card">
+
+        <h2>🧠 Geometry Quiz</h2>
+
+        <p class="question">
+            How many sides does a triangle have?
+        </p>
+
+        <button onclick="checkAnswer(this, false)">2</button>
+        <button onclick="checkAnswer(this, true)">3</button>
+        <button onclick="checkAnswer(this, false)">4</button>
+        <button onclick="checkAnswer(this, false)">5</button>
+
+        <p id="result"></p>
+
+        <p class="question">
+            How many degrees are in a right angle?
+        </p>
+
+        <button onclick="checkAnswer(this, false)">45°</button>
+        <button onclick="checkAnswer(this, true)">90°</button>
+        <button onclick="checkAnswer(this, false)">120°</button>
+        <button onclick="checkAnswer(this, false)">180°</button>
+
+        <p class="question">
+            How many degrees are in a straight angle?
+        </p>
+
+        <button onclick="checkAnswer(this, false)">90°</button>
+        <button onclick="checkAnswer(this, false)">120°</button>
+        <button onclick="checkAnswer(this, true)">180°</button>
+        <button onclick="checkAnswer(this, false)">360°</button>
+
+        <button class="score-btn" onclick="showScore()">
+            🏆 Show Final Score
+        </button>
+
+        <p id="finalScore"></p>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 StudyHub | Learn • Practice • Succeed</p>
+</footer>
+
+<script>
+let score = 0;
+
+function checkAnswer(button, correct) {
+
+    if (button.disabled) {
+        return;
+    }
+
+    button.disabled = true;
+
+    const result = document.getElementById("result");
+
+    if (correct) {
+        score++;
+        button.classList.add("correct");
+        result.textContent =
+            "✅ Correct! Well done! Score: " + score;
+    } else {
+        button.classList.add("wrong");
+        result.textContent =
+            "❌ Wrong answer. Try again! Score: " + score;
+    }
+}
+
+function showScore() {
+    document.getElementById("finalScore").textContent =
+        "🏆 Your Final Score is: " + score + " / 3";
+}
+</script>
+
+</body>
+</html>

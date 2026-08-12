@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudyHub - Subjects</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7ff;
+            color: #172033;
+        }
+
+        /* Navbar */
+        nav {
+            background: white;
+            height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 7%;
+            border-bottom: 1px solid #eee;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #2855e8;
+        }
+
+        .home {
+            text-decoration: none;
+            color: #172033;
+            font-weight: bold;
+        }
+
+        .home:hover {
+            color: #2855e8;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 60px 20px 35px;
+        }
+
+        .header h1 {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .header h1 span {
+            color: #2855e8;
+        }
+
+        .header p {
+            color: #667085;
+            font-size: 18px;
+        }
+
+        /* Subjects */
+        .subjects {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .subject-card {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 18px;
+            text-align: center;
+            border: 1px solid #e8e8e8;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+            transition: 0.3s;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+
+        .icon {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .subject-card h2 {
+            margin-bottom: 10px;
+        }
+
+        .subject-card p {
+            color: #667085;
+            margin-bottom: 20px;
+        }
+
+        .open-btn {
+            display: inline-block;
+            background: #2855e8;
+            color: white;
+            text-decoration: none;
+            padding: 11px 22px;
+            border-radius: 9px;
+            font-weight: bold;
+        }
+
+        .open-btn:hover {
+            background: #173fc0;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 60px;
+            background: #172033;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* Mobile */
+        @media (max-width: 800px) {
+            .subjects {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            Study<span>Hub</span>
+        </div>
+
+        <a class="home" href="index.html">🏠 Home</a>
+    </nav>
+
+
+    <!-- Header -->
+    <section class="header">
+        <h1>Explore <span>Subjects</span> 📚</h1>
+
+        <p>
+            Choose a subject and start learning today.
+        </p>
+    </section>
+
+
+    <!-- Subjects -->
+    <section class="subjects">
+
+        <div class="subject-card">
+            <div class="icon">➗</div>
+            <h2>Mathematics</h2>
+            <p>Learn numbers, algebra and problem solving.</p>
+            <a href="math.html" class="open-btn">Open Subject</a>
+        </div>
+
+
+        <div class="subject-card">
+            <div class="icon">📖</div>
+            <h2>English</h2>
+        <a href="english.html" class="open-btn">Open Subject</a>
+            <p>Improve grammar, vocabulary and writing.</p>
+         
+        </div>
+
+
+        
+
+        <div class="subject-card">
+            <div class="icon">⚛️</div>
+         <h2>Physics</h2>
+            <p>Discover motion, energy and the world of science.</p>
+            <a href="physics.html" class="open-btn">Open Subject</a>
+        </div>
+
+
+        <div class="subject-card">
+            <div class="icon">🧪</div>
+        <h2>Chemistry</h2>
+            <p>Explore atoms, elements and chemical reactions.</p>
+             <a href="chemistry.html" class="open-btn">Open Subject</a>
+        </div>
+
+
+        <div class="subject-card">
+            <div class="icon">🌱</div>
+           <h2>Biology</h2>
+            <p>Learn about plants, animals and the human body.</p>
+            <a href="biology.html" class="open-btn">Open Subject</a>
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 StudyHub | Learn • Practice • Succeed</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudyHub - Animals</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7ff;
+            color: #172033;
+        }
+
+        nav {
+            background: white;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #2855e8;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #172033;
+            font-weight: bold;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 65px 20px 45px;
+        }
+
+        .icon {
+            font-size: 70px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin: 15px 0;
+        }
+
+        h1 span {
+            color: #2855e8;
+        }
+
+        .hero p {
+            color: #667085;
+            font-size: 18px;
+        }
+
+        .content {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #667085;
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        .groups {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 20px;
+        }
+
+        .group {
+            background: #f8f9ff;
+            padding: 20px;
+            border-radius: 14px;
+            text-align: center;
+        }
+
+        .group .emoji {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .group h3 {
+            margin-bottom: 8px;
+        }
+
+        .group p {
+            font-size: 15px;
+        }
+
+        .example {
+            margin-top: 20px;
+            padding: 18px;
+            border-left: 5px solid #2855e8;
+            background: #f8f9ff;
+            line-height: 1.7;
+        }
+
+        .quiz {
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .question {
+            margin-bottom: 30px;
+        }
+
+        .question h3 {
+            margin-bottom: 15px;
+        }
+
+        .answer {
+            background: #2855e8;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            margin: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .answer:hover {
+            background: #173fc0;
+        }
+
+        .correct {
+            background: #16a34a !important;
+        }
+
+        .wrong {
+            background: #dc2626 !important;
+        }
+
+        .answer:disabled {
+            cursor: not-allowed;
+            opacity: 0.8;
+        }
+
+        .score-area {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .score-btn {
+            background: #172033;
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .score-btn:hover {
+            background: #2855e8;
+        }
+
+        #finalScore {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #2855e8;
+        }
+
+        footer {
+            margin-top: 60px;
+            background: #172033;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 800px) {
+
+            h1 {
+                font-size: 38px;
+            }
+
+            .card {
+                padding: 22px;
+            }
+
+            .groups {
+                grid-template-columns: 1fr;
+            }
+
+            .answer {
+                width: 100%;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">
+            Study<span>Hub</span>
+        </div>
+
+        <a href="biology.html">🧬 Back to Biology</a>
+
+    </nav>
+
+
+    <section class="hero">
+
+        <div class="icon">🐾</div>
+
+        <h1>Learn About <span>Animals</span></h1>
+
+        <p>
+            Explore animals and learn about their characteristics.
+        </p>
+
+    </section>
+
+
+    <main class="content">
+
+
+        <div class="card">
+
+            <h2>📚 What are Animals?</h2>
+
+            <p>
+                Animals are living organisms that need food, water and
+                oxygen to survive. Most animals can move from one place
+                to another and respond to their surroundings.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>🐾 Animal Groups</h2>
+
+            <p>
+                Animals can be grouped in different ways. Some common
+                groups include mammals, birds and fish.
+            </p>
+
+            <div class="groups">
+
+                <div class="group">
+
+                    <div class="emoji">🦁</div>
+
+                    <h3>Mammals</h3>
+
+                    <p>
+                        Mammals have hair or fur and feed their babies
+                        with milk.
+                    </p>
+
+                </div>
+
+
+                <div class="group">
+
+                    <div class="emoji">🦅</div>
+
+                    <h3>Birds</h3>
+
+                    <p>
+                        Birds have feathers, wings and beaks.
+                    </p>
+
+                </div>
+
+
+                <div class="group">
+
+                    <div class="emoji">🐟</div>
+
+                    <h3>Fish</h3>
+
+                    <p>
+                        Fish usually live in water and breathe using
+                        gills.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>🏠 Animal Habitats</h2>
+
+            <p>
+                A habitat is the natural home of an animal. Different
+                animals live in different environments such as forests,
+                oceans, deserts and grasslands.
+            </p>
+
+            <div class="example">
+
+                <strong>Example:</strong><br><br>
+
+                A camel is well adapted to live in a desert, while
+                many fish are adapted to live in water.
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>🍎 What Do Animals Need?</h2>
+
+            <p>
+                Animals need food, water, oxygen and a suitable habitat
+                to survive. Different animals eat different types of food.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>🧠 Quick Summary</h2>
+
+            <p>
+                Animals are living organisms that need food, water and
+                oxygen. They live in different habitats and have different
+                body structures and characteristics.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <section class="quiz">
+
+        <div class="card">
+
+            <h2>🧠 Animals Quiz</h2>
+
+            <br>
+
+
+            <div class="question">
+
+                <h3>1. What do animals need to survive?</h3>
+
+                <button class="answer" onclick="checkAnswer(this, true)">
+                    Food, water and oxygen
+                </button>
+
+                <button class="answer" onclick="checkAnswer(this, false)">
+                    Only sunlight
+                </button>
+
+                <button class="answer" onclick="checkAnswer(this, false)">
+                    Only soil
+                </button>
+
+            </div>
+
+
+            <div class="question">
+
+                <h3>2. Which group has feathers?</h3>
+
+                <button class="answer" onclick="checkAnswer(this, false)">
+                    Mammals
+                </button>
+
+                <button class="answer" onclick="checkAnswer(this, true)">
+                    Birds
+                </button>
+
+                <button class="answer" onclick="checkAnswer(this, false)">
+                    Fish
+                </button>
+
+            </div>
+
+
+            <div class="question">
+
+                <h3>3. What is a habitat?</h3>
+
+                <button class="answer" onclick="checkAnswer(this, true)">
+                    An animal's natural home
+                </button>
+
+                <button class="answer" onclick="checkAnswer(this, false)">
+                    A type of food
+                </button>
+
+                <button class="answer" onclick="checkAnswer(this, false)">
+                    A body part
+                </button>
+
+            </div>
+
+
+            <div class="score-area">
+
+                <button class="score-btn" onclick="showScore()">
+                    🏆 Show Final Score
+                </button>
+
+                <div id="finalScore"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            © 2026 StudyHub | Learn • Practice • Succeed
+        </p>
+
+    </footer>
+
+
+    <script>
+
+        let score = 0;
+        let answered = 0;
+
+
+        function checkAnswer(button, correct) {
+
+            if (button.disabled) {
+                return;
+            }
+
+            button.disabled = true;
+            answered++;
+
+            if (correct) {
+
+                button.classList.add("correct");
+                score++;
+
+            } else {
+
+                button.classList.add("wrong");
+
+            }
+
+        }
+
+
+        function showScore() {
+
+            if (answered < 3) {
+
+                document.getElementById("finalScore").textContent =
+                    "⚠️ Please answer all 3 questions first.";
+
+                return;
+            }
+
+
+            let message = "";
+
+
+            if (score === 3) {
+
+                message = "🌟 Excellent!";
+
+            } else if (score === 2) {
+
+                message = "👏 Great Job!";
+
+            } else if (score === 1) {
+
+                message = "👍 Keep Practicing!";
+
+            } else {
+
+                message = "📚 Study Again!";
+
+            }
+
+
+            document.getElementById("finalScore").textContent =
+                "🏆 Final Score: " + score + " / 3 — " + message;
+
+        }
+
+    </script>
+
+</body>
+</html>

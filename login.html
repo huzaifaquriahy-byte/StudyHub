@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>StudyHub - Login</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f7ff;
+    color:#172033;
+}
+
+nav{
+    background:white;
+    padding:20px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #eee;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#2855e8;
+}
+
+nav a{
+    text-decoration:none;
+    color:#172033;
+    font-weight:bold;
+}
+
+.login-container{
+    min-height:75vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+}
+
+.login-box{
+    width:100%;
+    max-width:430px;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.login-icon{
+    text-align:center;
+    font-size:55px;
+}
+
+h1{
+    text-align:center;
+    margin:15px 0 8px;
+}
+
+h1 span{
+    color:#2855e8;
+}
+
+.subtitle{
+    text-align:center;
+    color:#667085;
+    margin-bottom:30px;
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:bold;
+}
+
+input{
+    width:100%;
+    padding:14px;
+    margin-bottom:20px;
+    border:1px solid #d9deea;
+    border-radius:10px;
+    font-size:16px;
+}
+
+input:focus{
+    outline:none;
+    border-color:#2855e8;
+}
+
+.login-btn{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#2855e8;
+    color:white;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.login-btn:hover{
+    background:#173fc0;
+}
+
+#message{
+    text-align:center;
+    margin-top:20px;
+    font-weight:bold;
+    line-height:1.5;
+}
+
+.signup-link{
+    text-align:center;
+    margin-top:20px;
+    color:#667085;
+}
+
+.signup-link a{
+    color:#2855e8;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+footer{
+    background:#172033;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">
+        Study<span>Hub</span>
+    </div>
+
+    <a href="index.html">🏠 Home</a>
+
+</nav>
+
+
+<div class="login-container">
+
+    <div class="login-box">
+
+        <div class="login-icon">🔐</div>
+
+        <h1>Welcome to <span>StudyHub</span></h1>
+
+        <p class="subtitle">
+            Login to continue learning.
+        </p>
+
+
+        <form onsubmit="loginUser(event)">
+
+            <label for="email">
+                Email
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+            >
+
+
+            <label for="password">
+                Password
+            </label>
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+                required
+            >
+
+
+            <button
+                type="submit"
+                class="login-btn">
+                Login 🚀
+            </button>
+
+        </form>
+
+
+        <div id="message"></div>
+
+
+        <div class="signup-link">
+
+            Don't have an account?
+
+            <a href="signup.html">
+                Create Account
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    <p>
+        © 2026 StudyHub | Learn • Practice • Succeed
+    </p>
+
+</footer>
+
+
+<script>
+
+function loginUser(event){
+
+    event.preventDefault();
+
+    const email =
+        document.getElementById("email")
+        .value
+        .trim()
+        .toLowerCase();
+
+    const password =
+        document.getElementById("password").value;
+
+    const message =
+        document.getElementById("message");
+
+
+    /* Get saved accounts */
+
+    const accounts =
+        JSON.parse(
+            localStorage.getItem("studyHubAccounts")
+        ) || [];
+
+
+    /* Find account */
+
+    const account =
+        accounts.find(function(user){
+
+            return user.email === email &&
+                   user.password === password;
+
+        });
+
+
+    /* Wrong login */
+
+    if(!account){
+
+        message.style.color = "#dc2626";
+
+        message.textContent =
+            "❌ Email or password is incorrect.";
+
+        return;
+    }
+
+
+    /* Save logged-in student */
+
+    localStorage.setItem(
+        "studyHubCurrentUser",
+        JSON.stringify(account)
+    );
+
+
+    /* Success */
+
+    message.style.color = "#16a34a";
+
+    message.textContent =
+        "🎉 Login successful!";
+
+
+    /* Go to Home */
+
+    setTimeout(function(){
+localStorage.setItem("currentUser", account.email);
+localStorage.setItem("currentUserName", account.name);
+       window.location.href = "./index.html";
+
+    },1000);
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StudyHub Admin Login</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f4f7ff;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.login-box{
+
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+width:380px;
+
+}
+
+h1{
+
+text-align:center;
+margin-bottom:25px;
+color:#2855e8;
+
+}
+
+input{
+
+width:100%;
+padding:15px;
+margin-bottom:18px;
+border:1px solid #ddd;
+border-radius:10px;
+font-size:16px;
+
+}
+
+button{
+
+width:100%;
+padding:15px;
+background:#2855e8;
+color:white;
+border:none;
+border-radius:10px;
+font-size:17px;
+cursor:pointer;
+
+}
+
+button:hover{
+
+background:#173fc0;
+
+}
+
+#error{
+
+margin-top:15px;
+text-align:center;
+color:red;
+font-weight:bold;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="login-box">
+
+<h1>👑 Admin Login</h1>
+
+<input
+type="text"
+id="username"
+placeholder="Admin Username">
+
+<input
+type="password"
+id="password"
+placeholder="Password">
+
+<button onclick="loginAdmin()">
+
+Login
+
+</button>
+
+<p id="error"></p>
+
+</div>
+
+<script>
+
+function loginAdmin(){
+
+const username =
+document.getElementById("username").value;
+
+const password =
+document.getElementById("password").value;
+
+if(
+
+username==="admin"
+
+&&
+
+password==="studyhub123"
+
+){
+
+localStorage.setItem(
+
+"adminLoggedIn",
+
+"true"
+
+);
+
+window.location.href="admin.html";
+
+}else{
+
+document.getElementById("error").textContent=
+
+"❌ Wrong Username or Password";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

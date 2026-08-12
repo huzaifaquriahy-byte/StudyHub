@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudyHub - Gravity</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7ff;
+            color: #172033;
+        }
+
+        nav {
+            background: white;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #2855e8;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #172033;
+            font-weight: bold;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 65px 20px 45px;
+        }
+
+        .icon {
+            font-size: 70px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin: 15px 0;
+        }
+
+        h1 span {
+            color: #2855e8;
+        }
+
+        .hero p {
+            color: #667085;
+            font-size: 18px;
+        }
+
+        .content {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #667085;
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        .formula {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f0f4ff;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #2855e8;
+        }
+
+        .example {
+            margin-top: 20px;
+            padding: 18px;
+            border-left: 5px solid #2855e8;
+            background: #f8f9ff;
+            line-height: 1.7;
+        }
+
+        .quiz {
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .question {
+            margin-bottom: 30px;
+        }
+
+        .question h3 {
+            margin-bottom: 15px;
+        }
+
+        .answer {
+            background: #2855e8;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            margin: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .answer:hover {
+            background: #173fc0;
+        }
+
+        .correct {
+            background: #16a34a !important;
+        }
+
+        .wrong {
+            background: #dc2626 !important;
+        }
+
+        .answer:disabled {
+            cursor: not-allowed;
+            opacity: 0.8;
+        }
+
+        .score-area {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .score-btn {
+            background: #172033;
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .score-btn:hover {
+            background: #2855e8;
+        }
+
+        #finalScore {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #2855e8;
+        }
+
+        footer {
+            margin-top: 60px;
+            background: #172033;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 800px) {
+            h1 {
+                font-size: 38px;
+            }
+
+            .card {
+                padding: 22px;
+            }
+
+            .answer {
+                width: 100%;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">
+            Study<span>Hub</span>
+        </div>
+
+        <a href="physics.html">⚛️ Back to Physics</a>
+
+    </nav>
+
+
+    <section class="hero">
+
+        <div class="icon">🌍</div>
+
+        <h1>Learn <span>Gravity</span></h1>
+
+        <p>
+            Understand how gravity affects objects around us.
+        </p>
+
+    </section>
+
+
+    <main class="content">
+
+
+        <div class="card">
+
+            <h2>📚 What is Gravity?</h2>
+
+            <p>
+                Gravity is a force that attracts objects toward each other.
+                On Earth, gravity pulls objects toward the ground.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>🌍 Gravity on Earth</h2>
+
+            <p>
+                Earth's gravity keeps us on the ground and makes objects
+                fall when we drop them.
+            </p>
+
+            <div class="formula">
+                g ≈ 9.8 m/s²
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>🍎 Example of Gravity</h2>
+
+            <p>
+                When you drop an apple, Earth pulls the apple downward.
+                This is an everyday example of gravity.
+            </p>
+
+            <div class="example">
+
+                <strong>Example:</strong><br><br>
+
+                If you throw a ball upward, gravity eventually pulls
+                the ball back toward Earth.
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>🪐 Gravity in Space</h2>
+
+            <p>
+                Gravity also exists in space. The Sun's gravity keeps
+                planets in orbit, while the Earth's gravity keeps the
+                Moon in orbit around Earth.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>🧠 Quick Summary</h2>
+
+            <p>
+                Gravity is a force of attraction. Earth's gravity pulls
+                objects toward the ground. Gravity also keeps planets
+                and moons in their orbits.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <section class="quiz">
+
+        <div class="card">
+
+            <h2>🧠 Gravity Quiz</h2>
+
+            <br>
+
+
+            <div class="question">
+
+                <h3>1. What is gravity?</h3>
+
+                <button class="answer" onclick="checkAnswer(this, true)">
+                    A force of attraction
+                </button>
+
+                <button class="answer" onclick="checkAnswer(this, false)">
+                    A type of light
+                </button>
+
+                <button class="answer" onclick="checkAnswer(this, false)">
+                    A type of sound
+                </button>
+
+            </div>
+
+
+            <div class="question">
+
+                <h3>2. What does Earth's gravity do?</h3>
+
+                <button class="answer" onclick="checkAnswer(this, true)">
+                    Pulls objects toward Earth
+                </button>
+
+                <button class="answer" onclick="checkAnswer(this, false)">
+                    Makes objects disappear
+                </button>
+
+                <button class="answer" onclick="checkAnswer(this, false)">
+                    Stops all movement
+                </button>
+
+            </div>
+
+
+            <div class="question">
+
+                <h3>3. Approximately what is Earth's gravitational acceleration?</h3>
+
+                <button class="answer" onclick="checkAnswer(this, false)">
+                    2 m/s²
+                </button>
+
+                <button class="answer" onclick="checkAnswer(this, true)">
+                    9.8 m/s²
+                </button>
+
+                <button class="answer" onclick="checkAnswer(this, false)">
+                    100 m/s²
+                </button>
+
+            </div>
+
+
+            <div class="score-area">
+
+                <button class="score-btn" onclick="showScore()">
+                    🏆 Show Final Score
+                </button>
+
+                <div id="finalScore"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            © 2026 StudyHub | Learn • Practice • Succeed
+        </p>
+
+    </footer>
+
+
+    <script>
+
+        let score = 0;
+        let answered = 0;
+
+        function checkAnswer(button, correct) {
+
+            if (button.disabled) {
+                return;
+            }
+
+            button.disabled = true;
+            answered++;
+
+            if (correct) {
+
+                button.classList.add("correct");
+                score++;
+
+            } else {
+
+                button.classList.add("wrong");
+
+            }
+
+        }
+
+
+        function showScore() {
+
+            if (answered < 3) {
+
+                document.getElementById("finalScore").textContent =
+                    "⚠️ Please answer all 3 questions first.";
+
+                return;
+            }
+
+            let message = "";
+
+            if (score === 3) {
+                message = "🌟 Excellent!";
+            }
+            else if (score === 2) {
+                message = "👏 Great Job!";
+            }
+            else if (score === 1) {
+                message = "👍 Keep Practicing!";
+            }
+            else {
+                message = "📚 Study Again!";
+            }
+
+            document.getElementById("finalScore").textContent =
+                "🏆 Final Score: " + score + " / 3 — " + message;
+
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudyHub - Computer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7ff;
+            color: #172033;
+        }
+
+        nav {
+            background: white;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #2855e8;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #172033;
+            font-weight: bold;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 65px 20px 35px;
+        }
+
+        .icon {
+            font-size: 70px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin: 15px 0;
+        }
+
+        h1 span {
+            color: #2855e8;
+        }
+
+        .hero p {
+            color: #667085;
+            font-size: 18px;
+        }
+
+        .topics {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            text-align: center;
+            text-decoration: none;
+            color: #172033;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+        }
+
+        .card h2 {
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #667085;
+            line-height: 1.5;
+        }
+
+        footer {
+            margin-top: 70px;
+            background: #172033;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 800px) {
+            .topics {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 38px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            Study<span>Hub</span>
+        </div>
+
+        <a href="subjects.html">📚 Back to Subjects</a>
+    </nav>
+
+    <section class="hero">
+
+        <div class="icon">💻</div>
+
+        <h1>Learn <span>Computer</span></h1>
+
+        <p>
+            Learn Computer Science with StudyHub.
+        </p>
+
+    </section>
+
+    <section class="topics">
+
+        <a href="computer-introduction.html" class="card">
+            <h2>💻 Introduction to Computer</h2>
+            <p>Learn what a computer is and how it is used.</p>
+        </a>
+
+        <a href="computer-parts.html" class="card">
+            <h2>🖥️ Parts of Computer</h2>
+            <p>Learn about the main parts of a computer.</p>
+        </a>
+
+        <a href="input-output.html" class="card">
+            <h2>⌨️ Input & Output Devices</h2>
+            <p>Learn about input and output devices.</p>
+        </a>
+
+        <a href="hardware-software.html" class="card">
+            <h2>⚙️ Hardware & Software</h2>
+            <p>Understand the difference between hardware and software.</p>
+        </a>
+
+        <a href="memory-storage.html" class="card">
+            <h2>💾 Memory & Storage</h2>
+            <p>Learn about computer memory and storage devices.</p>
+        </a>
+
+        <a href="internet.html" class="card">
+            <h2>🌐 Internet</h2>
+            <p>Learn the basics of the internet and its uses.</p>
+        </a>
+
+    </section>
+
+    <footer>
+        <p>© 2026 StudyHub | Learn • Practice • Succeed</p>
+    </footer>
+
+</body>
+</html>

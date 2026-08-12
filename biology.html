@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyHub - Biology</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7ff;
+            color: #172033;
+        }
+
+        nav {
+            background: white;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #2855e8;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #172033;
+            font-weight: bold;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 65px 20px 35px;
+        }
+
+        .icon {
+            font-size: 70px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin: 15px 0;
+        }
+
+        h1 span {
+            color: #2855e8;
+        }
+
+        .hero p {
+            color: #667085;
+            font-size: 18px;
+        }
+
+        .topics {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+        .card h2 {
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #667085;
+            line-height: 1.5;
+        }
+
+        footer {
+            margin-top: 70px;
+            background: #172033;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 800px) {
+            .topics {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 38px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            Study<span>Hub</span>
+        </div>
+
+        <a href="subjects.html">📚 Back to Subjects</a>
+    </nav>
+
+    <section class="hero">
+
+        <div class="icon">🌱</div>
+
+        <h1>Learn <span>Biology</span></h1>
+
+        <p>
+            Explore Biology and learn about living things.
+        </p>
+
+    </section>
+
+    <section class="topics">
+
+       <a href="cells.html" class="card">
+    <h2>🧬 Cells</h2>
+    <p>Learn about cells and how living things are made.</p>
+</a>
+
+       <a href="plants.html" class="card">
+    <h2>🌿 Plants</h2>
+    <p>Discover plants, their parts and how they grow.</p>
+</a>
+
+        <a href="animals.html" class="card">
+    <h2>🐾 Animals</h2>
+    <p>Learn about animals and the world around them.</p>
+</a>
+
+    </section>
+
+    <footer>
+        <p>© 2026 StudyHub | Learn • Practice • Succeed</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudyHub - Numbers</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7ff;
+            color: #172033;
+        }
+
+        nav {
+            background: white;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #2855e8;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #172033;
+            font-weight: bold;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 20px 40px;
+        }
+
+        .hero .icon {
+            font-size: 65px;
+        }
+
+        h1 {
+            font-size: 45px;
+            margin: 15px 0;
+        }
+
+        h1 span {
+            color: #2855e8;
+        }
+
+        .hero p {
+            color: #667085;
+            font-size: 18px;
+        }
+
+        .lesson {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #667085;
+            line-height: 1.7;
+            font-size: 17px;
+        }
+        .quiz button {
+    background: #2855e8;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin: 6px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.quiz {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+.quiz button:hover {
+    background: #173fc0;
+    transform: translateY(-2px);
+}
+
+.quiz button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+.quiz button.correct {
+    background: #16a34a;
+}
+
+.quiz button.wrong {
+    background: #dc2626;
+    .score-btn {
+    display: block;
+    margin: 25px auto 0;
+    background: #f59e0b !important;
+    padding: 14px 25px;
+    font-size: 17px;
+}
+}.question {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #172033;
+}.question + button {
+    margin-top: 5px;
+}
+#finalScore {
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #2855e8;
+    text-align: center;
+}
+}
+        footer {
+            margin-top: 60px;
+            background: #172033;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            Study<span>Hub</span>
+        </div>
+
+        <a href="math.html">➗ Back to Mathematics</a>
+    </nav>
+
+    <section class="hero">
+        <div class="icon">🔢</div>
+
+        <h1>Learn <span>Numbers</span></h1>
+
+        <p>Understand numbers and basic calculations.</p>
+    </section>
+
+    <section class="lesson">
+
+        <div class="card">
+            <h2>📚 What are Numbers?</h2>
+
+            <p>
+                Numbers are used to count, measure and solve problems.
+                Examples include 1, 2, 3, 10, 100 and many more.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>➕ Basic Operations</h2>
+
+            <p>
+                Addition (+), subtraction (-), multiplication (×)
+                and division (÷) are basic mathematical operations.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>✏️ Example</h2>
+
+            <p>
+                5 + 3 = 8<br>
+                10 - 4 = 6<br>
+                4 × 2 = 8<br>
+                12 ÷ 3 = 4
+            </p>
+        </div>
+
+   </section>
+
+<section class="quiz">
+
+    <div class="card">
+        <h2>🧠 Numbers Quiz</h2>
+
+        <p class="question">What is 5 + 3?</p>
+
+        <button onclick="checkAnswer(this, false)">6</button>
+        <button onclick="checkAnswer(this, true)">8</button>
+        <button onclick="checkAnswer(this, false)">9</button>
+        <button onclick="checkAnswer(this, false)">10</button>
+
+        <p id="result"></p>
+        <p class="question">What is 10 - 4?</p>
+
+<button onclick="checkAnswer(this, false)">5</button>
+<button onclick="checkAnswer(this, true)">6</button>
+<button onclick="checkAnswer(this, false)">7</button>
+<button onclick="checkAnswer(this, false)">8</button>
+<p class="question">What is 4 × 2?</p>
+
+<button onclick="checkAnswer(this, false)">6</button>
+<button onclick="checkAnswer(this, true)">8</button>
+<button onclick="checkAnswer(this, false)">10</button>
+<button onclick="checkAnswer(this, false)">12</button>
+<button class="score-btn" onclick="showScore()">🏆 Show Final Score</button>
+
+<p id="finalScore"></p>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 StudyHub | Learn • Practice • Succeed</p>
+</footer>
+<script>
+let score = 0;
+
+
+
+function checkAnswer(button, correct) {
+    const result = document.getElementById("result");
+
+    if (correct) {
+        score++;
+        button.classList.add("correct");
+        result.textContent = "✅ Correct! Well done! Score: " + score;
+    } else {
+        button.classList.add("wrong");
+        result.textContent = "❌ Wrong answer. Try again! Score: " + score;
+    }
+
+    button.disabled = true;
+}
+
+function showScore() {
+    document.getElementById("finalScore").textContent =
+        "🏆 Your Final Score is: " + score + " / 3";
+}
+</script>
+
+</body>
+</html>

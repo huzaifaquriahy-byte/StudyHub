@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudyHub - Introduction to Computer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7ff;
+            color: #172033;
+        }
+
+        nav {
+            background: white;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #2855e8;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #172033;
+            font-weight: bold;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 20px 40px;
+        }
+
+        .hero .icon {
+            font-size: 65px;
+        }
+
+        h1 {
+            font-size: 45px;
+            margin: 15px 0;
+        }
+
+        h1 span {
+            color: #2855e8;
+        }
+
+        .hero p {
+            color: #667085;
+            font-size: 18px;
+        }
+
+        .lesson {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #667085;
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        .quiz {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .quiz button {
+            background: #2855e8;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            margin: 6px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .quiz button:hover {
+            background: #173fc0;
+            transform: translateY(-2px);
+        }
+
+        .quiz button.correct {
+            background: #16a34a;
+        }
+
+        .quiz button.wrong {
+            background: #dc2626;
+        }
+
+        .quiz button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        #finalScore {
+            margin-top: 20px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #2855e8;
+            text-align: center;
+        }
+
+        footer {
+            margin-top: 60px;
+            background: #172033;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 800px) {
+            h1 {
+                font-size: 36px;
+            }
+
+            .quiz {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            Study<span>Hub</span>
+        </div>
+
+        <a href="computer.html">💻 Back to Computer</a>
+    </nav>
+
+    <section class="hero">
+
+        <div class="icon">💻</div>
+
+        <h1>Introduction to <span>Computer</span></h1>
+
+        <p>
+            Learn the basic concept of a computer.
+        </p>
+
+    </section>
+
+    <section class="lesson">
+
+        <div class="card">
+            <h2>📚 What is a Computer?</h2>
+
+            <p>
+                A computer is an electronic machine that accepts data,
+                processes it, stores it, and gives useful information.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>⚙️ What Can a Computer Do?</h2>
+
+            <p>
+                A computer can perform many tasks such as calculations,
+                writing documents, watching videos, playing games,
+                storing information and accessing the internet.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>🧠 Basic Computer Functions</h2>
+
+            <p>
+                The four basic functions of a computer are:
+                Input, Processing, Output and Storage.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>✏️ Example</h2>
+
+            <p>
+                When you type your name using a keyboard, the computer
+                receives it as input, processes it and displays your name
+                on the screen as output.
+            </p>
+        </div>
+
+    </section>
+
+    <section class="quiz">
+
+        <div class="card">
+
+            <h2>🧠 Computer Quiz</h2>
+
+            <p><strong>Question 1:</strong> What is a computer?</p>
+
+            <button onclick="checkAnswer(this, false)">A book</button>
+            <button onclick="checkAnswer(this, true)">An electronic machine</button>
+            <button onclick="checkAnswer(this, false)">A chair</button>
+            <button onclick="checkAnswer(this, false)">A pencil</button>
+
+            <p id="result"></p>
+
+            <p><strong>Question 2:</strong> Which one is a basic computer function?</p>
+
+            <button onclick="checkAnswer(this, true)">Input</button>
+            <button onclick="checkAnswer(this, false)">Sleeping</button>
+            <button onclick="checkAnswer(this, false)">Eating</button>
+            <button onclick="checkAnswer(this, false)">Running</button>
+
+            <p><strong>Question 3:</strong> What does a computer process?</p>
+
+            <button onclick="checkAnswer(this, false)">Food</button>
+            <button onclick="checkAnswer(this, true)">Data</button>
+            <button onclick="checkAnswer(this, false)">Water</button>
+            <button onclick="checkAnswer(this, false)">Clothes</button>
+
+            <button onclick="showScore()">🏆 Show Final Score</button>
+
+            <p id="finalScore"></p>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 StudyHub | Learn • Practice • Succeed</p>
+    </footer>
+
+    <script>
+
+        let score = 0;
+
+        function checkAnswer(button, correct) {
+
+            if (button.disabled) {
+                return;
+            }
+
+            button.disabled = true;
+
+            const result = document.getElementById("result");
+
+            if (correct) {
+                score++;
+                button.classList.add("correct");
+                result.textContent =
+                    "✅ Correct! Well done! Score: " + score;
+            } else {
+                button.classList.add("wrong");
+                result.textContent =
+                    "❌ Wrong answer. Try again! Score: " + score;
+            }
+        }
+
+        function showScore() {
+
+            document.getElementById("finalScore").textContent =
+                "🏆 Your Final Score is: " + score + " / 3";
+
+        }
+
+    </script>
+
+</body>
+</html>
